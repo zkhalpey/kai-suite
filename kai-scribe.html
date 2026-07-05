@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAI Scribe — Ambient Dictation & Templates</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+  <div class="nav-content">
+    <div class="logo">KAI <span>Scribe</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="kai-doc.html">KAI Doc</a></li>
+      <li><a href="kai-patient.html">KAI Patient</a></li>
+      <li><a href="kai-researcher.html">KAI Researcher</a></li>
+      <li><a href="kai-scribe.html" class="active">KAI Scribe</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero hero-gradient">
+  <span class="badge">Ambient Dictation</span>
+  <h1>Speak. We scribe.</h1>
+  <p class="subtitle">Ambient dictation trained on the Khalpey Master Op Log format. Accepts perfusionist cards, raw dictation, or structured bullets. Outputs publication-ready clinical documentation.</p>
+</section>
+
+<section class="grid">
+  <div class="glass-card">
+    <div class="accent-line"></div>
+    <h3>Perfusionist Card Ingestion</h3>
+    <p style="color:var(--text-muted); margin:0.5rem 0;">Copy the perfusionist card into OneNote folder 26. opKai parses bypass time, cross-clamp, cardioplegia, LAA clip, complications, and EBL automatically.</p>
+  </div>
+
+  <div class="glass-card">
+    <div class="accent-line"></div>
+    <h3>Raw Dictation Parsing</h3>
+    <p style="color:var(--text-muted); margin:0.5rem 0;">Speak naturally into Discord, here, or OneNote. Fable 5 parses the dictation into structured Khalpey Master Op Log format with all measurements captured.</p>
+  </li>
+
+  <div class="glass-card">
+    <div class="accent-line crimson"></div>
+    <h3>billingKai Auto-Optimization</h3>
+    <p style="color:var(--text-muted); margin:0.5rem 0;">Every op note auto-analyzed for CPT, DRG, and CDI optimization. NCCI edits enforced. Missing documentation flagged for higher-tier reimbursement.</p>
+  </div>
+</section>
+
+<section style="max-width:800px; margin:3rem auto; padding:2rem;">
+  <div class="glass-card">
+    <h3 style="margin-bottom:1rem;">Tomorrow's Workflow</h3>
+    <ol style="color:var(--text-muted); line-height:2; padding-left:1.5rem;">
+      <li><strong style="color:var(--text-primary);">In the OR:</strong> Copy perfusionist card into OneNote Master Op Log folder 26 at <code style="color:var(--sky); background:var(--glass-bg); padding:0.1rem 0.4rem; border-radius:4px;">yyyymmdd.case_number</code></li>
+      <li><strong style="color:var(--text-primary);">After the case:</strong> Dictate any additional notes (complications, unusual anatomy) into the same OneNote page or Discord</li>
+      <li><strong style="color:var(--text-primary);">Trigger opKai:</strong> "opKai, write op note for [case date/number]"</li>
+      <li><strong style="color:var(--text-primary);">Auto-pipeline:</strong> opKai generates note &#8594; billingKai optimizes codes &#8594; output saved to <code style="color:var(--sky); background:var(--glass-bg); padding:0.1rem 0.4rem; border-radius:4px;">~/kaisuite/clinical/op_notes/</code></li>
+      <li><strong style="color:var(--text-primary);">Submit:</strong> Copy/paste into Epic, or email to yourself with one command</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <p>KAI Scribe &mdash; Ambient documentation engine by Zain Khalpey MD, PhD, FACS</p>
+</footer>
+</body>
+</html>
