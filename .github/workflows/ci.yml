@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install ripgrep
-        run: sudo apt-get update && sudo apt-get install -y ripgrep
       - name: Require cite pack files
         run: |
           test -f README.md
@@ -20,7 +18,7 @@ jobs:
           test -f CITATION.cff
       - name: Secret-pattern scrub
         run: |
-          if rg -n "BEGIN (RSA |OPENSSH )?PRIVATE KEY|sk-ant-|sk-proj-|ghp_[A-Za-z0-9]{20,}" . ; then
+          if grep -R -n -E "BEGIN (RSA |OPENSSH )?PRIVATE KEY|sk-ant-|sk-proj-|ghp_[A-Za-z0-9]{20,}" --exclude-dir=.git . ; then
             echo "secret-like pattern found" >&2
             exit 1
           fi
@@ -28,13 +26,11 @@ jobs:
       - name: HTML smoke
         run: |
           if ls *.html >/dev/null 2>&1; then
-            python3 - <<'PY'
-from pathlib import Path
-htmls=list(Path('.').glob('*.html'))
-assert htmls, 'expected html'
-for p in htmls:
-    t=p.read_text(errors='ignore')
-    assert '<html' in t.lower() or '<!doctype' in t.lower(), p
-print(f'html_ok count={len(htmls)}')
-PY
+            for f in *.html; do
+              grep -qiE "<!doctype|<html" "$f" || { echo "bad html: $f"; exit 1; }
+            done
+            echo "html_ok"
+          else
+            echo "no html (ok for template)"
           fi
+
