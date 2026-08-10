@@ -1,0 +1,14 @@
+{
+  "name": "Kai public demo",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "forwardPorts": [8080],
+  "postCreateCommand": "python3 -m http.server 8080",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "liveServer.settings.port": 8080
+      },
+      "extensions": ["ritwickdey.LiveServer"]
+    }
+  }
+}

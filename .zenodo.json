@@ -1,0 +1,26 @@
+{
+  "title": "KAI Suite Web Demos",
+  "description": "Public non-PHI web demos for the Khalpey AI Lab KAI Suite surfaces (researcher, scribe, patient, doc).",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Khalpey, Zain",
+      "affiliation": "Arizona State University; HonorHealth; Khalpey AI Lab (ATARI AI)"
+    }
+  ],
+  "keywords": [
+    "kai-fabric",
+    "clinical-ai",
+    "demo",
+    "github-pages"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/zkhalpey/kai-suite",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+      cff-version: 1.2.0
+      message: "If you use this software, please cite it using these metadata."
+      type: software
+      title: "KAI Suite Web Demos"
+      abstract: "Public non-PHI web demos for the Khalpey AI Lab KAI Suite surfaces (researcher, scribe, patient, doc)."
+      authors:
+        - family-names: Khalpey
+          given-names: Zain
+          email: zain@khalpey.ai
+          affiliation: "John Shufeldt School of Medicine and Medical Engineering, Arizona State University; HonorHealth Cardiac Surgery; Khalpey AI Lab (ATARI AI)"
+      version: 0.1.0
+      date-released: "2026-08-09"
+      url: "https://zkhalpey.github.io/kai-suite/"
+      repository-code: "https://github.com/zkhalpey/kai-suite"
+      license: MIT
+      keywords:
+        - kai-fabric
+- clinical-ai
+- demo
+- github-pages
